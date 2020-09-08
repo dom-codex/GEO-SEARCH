@@ -1,0 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+$primary: #272727;
+$accent: rgba(255, 255, 255, 0.95);
+@mixin fullScreen {
+  width: 100%;
+  height: 100%;
+}

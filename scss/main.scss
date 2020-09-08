@@ -1,0 +1,14 @@
+@import "./config";
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+main {
+  @include fullScreen;
+  background-image: linear-gradient(
+    to right,
+    rgba($primary, 0.9),
+    rgba($primary, 0.3)
+  );
+}
