@@ -5,9 +5,212 @@
           box-sizing: border-box;
 }
 
+header {
+  width: 100%;
+  background-color: rgba(39, 39, 39, 0.1);
+  padding-left: 5px;
+  padding: 10px 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h2 {
+  font-size: 1.8em;
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h2 span {
+  color: #ccc;
+}
+
+header .search {
+  position: relative;
+  width: 60%;
+  padding-right: 10px;
+}
+
+header .search input {
+  width: 85%;
+  height: 32px;
+  padding-left: 3px;
+  border: none;
+  outline: none;
+  background-color: rgba(39, 39, 39, 0.3);
+  font-size: 1.1em;
+  color: #ccc;
+}
+
+header .search input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+header .search input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+header .search input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+header .search input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+header .search button {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  border: none;
+  height: 32px;
+  width: 20%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.geo-body {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.location-name {
+  border-bottom: thin solid rgba(39, 39, 39, 0.2);
+  padding-bottom: 5px;
+}
+
+.location-name p {
+  font-size: 1.35em;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.temp-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.temp-label p {
+  margin-right: 8px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.temp-label button {
+  height: 35px;
+  width: 42px;
+}
+
+.temperature p {
+  font-size: 5em;
+}
+
+.temperature small {
+  font-size: 0.8em;
+}
+
+.pos-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border-bottom: thin solid rgba(255, 255, 255, 0.8);
+  padding-bottom: 5px;
+}
+
+.pos-label p {
+  margin-right: 5px;
+}
+
+.pos-label button {
+  width: 42px;
+  height: 25px;
+}
+
+.positions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12px;
+  margin-bottom: 15px;
+  border-bottom: thin solid rgba(39, 39, 39, 0.2);
+  padding-bottom: 10px;
+}
+
+.positions div:nth-child(1) {
+  margin-right: 13px;
+}
+
+.positions p {
+  text-align: center;
+  padding: 2px 5px;
+}
+
+.positions p:nth-child(2) {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: normal;
+}
+
+.weather-conditions h3 {
+  display: inline-block;
+  border-bottom: thin solid rgba(39, 39, 39, 0.2);
+  padding: 0 8px 3px 9px;
+  margin-bottom: 12px;
+}
+
+.weather-conditions span {
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  font-size: 1.2em;
+}
+
+.weather-conditions .val {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1em;
+  margin-top: 3px;
+  letter-spacing: 1px;
+}
+
 body {
   width: 100vw;
   height: 100vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   overflow: hidden;
 }
 
@@ -16,5 +219,8 @@ main {
   height: 100%;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3)));
   background-image: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3));
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 20px;
 }
 /*# sourceMappingURL=main.css.map */
