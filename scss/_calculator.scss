@@ -4,8 +4,13 @@
   z-index: 1;
   background-color: rgba($primary, 1);
   padding-top: 25px;
+  padding-bottom: 30px;
   transform: translateY(100%);
   @include transition(0.7s);
+  & .temp-body {
+    max-width: 860px;
+    margin: auto;
+  }
   & .close {
     width: 20%;
   }
@@ -67,7 +72,41 @@
       font-size: 1.2em;
     }
   }
+  @include width480 {
+    & .text-1 {
+      padding-left: 5px;
+    }
+    & .inputArea {
+      width: 65% !important;
+    }
+    & select {
+      width: 60% !important;
+    }
+  }
+  @include width320 {
+    & .text-1 {
+      display: block;
+      text-align: left;
+      margin: 0 !important;
+    }
+    & .temp-component {
+      margin: 0 !important;
+    }
+    & .inputArea {
+      width: 97% !important;
+    }
+    & select {
+      width: 90% !important;
+    }
+  }
 }
 .openconverter {
   transform: translateY(40%);
+  @include height520 {
+    transform: translateY(20%) !important;
+  }
+  @include height420 {
+    overflow-y: scroll !important;
+    transform: translateY(0%) !important;
+  }
 }

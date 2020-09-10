@@ -15,12 +15,14 @@
     <main>
         <section class="weather-reports">
             <header>
-                <h2><span>Geo</span>Search
-                </h2>
-                <div class="search">
-                    <input type="text"
-                        placeholder="Enter location" />
-                    <button>search</button>
+                <div class="header">
+                    <h2><span>Geo</span>Search
+                    </h2>
+                    <div class="search">
+                        <input type="text"
+                            placeholder="Enter location" />
+                        <button>search</button>
+                    </div>
                 </div>
             </header>
             <section class="geo-body">
@@ -79,62 +81,69 @@
             </section>
         </section>
         <section class="calculator">
-            <div id="tempcontainer">
-                <p class="text-1"
-                    id="temp-title">
-                    Temperature Converter</p>
-                <span><button
-                        class="close">close</button></span>
-                <hr />
+            <div class="temp-body">
+                <div id="tempcontainer">
+                    <p class="text-1"
+                        id="temp-title">
+                        Temperature Converter
+                    </p>
+                    <span><button
+                            class="close">close</button></span>
+                    <hr />
 
-                <div class="temp-component">
+                    <div
+                        class="temp-component">
+                    </div>
+                    <span
+                        class="text-1">Convert:</span><input
+                        type="number"
+                        placeholder="Enter value of temperature to convert"
+                        class="inputArea"
+                        class="input">
                 </div>
-                <span
-                    class="text-1">Convert:</span><input
-                    type="number"
-                    placeholder="Enter value of temperature to convert"
-                    class="inputArea"
-                    class="input">
-            </div>
-            <div class="temp-component"
-                id="convertFrom">
-                <span
-                    class="text-1">From:</span><select
-                    id="selectFrom">
-                    <option value="degree">
-                        Degree
-                        centigrade
-                    </option>
-                    <option
-                        value="farenheit">
-                        farenheit
-                    </option>
-                </select></div>
-            <div class="temp-component"
-                id="convertTo"><span
-                    class="text-1">To:</span><select
-                    id="selectTo">
-                    <option
-                        value="farenheit">
-                        farenheit
-                    </option>
-                    <option value="degree">
-                        Degree
-                        centigrade
-                    </option>
-                </select> </div>
-            <div class="temp-component"
-                id="Result">
-                <span
-                    class="text-1">Result:</span><input
-                    type="text"
-                    placeholder="result"
-                    class="inputArea"
-                    class="input" readonly />
-            </div>
-            <div id="convertercontainer">
-                <button type="button"
-                    id="converter">convert</button>
+                <div class="temp-component"
+                    id="convertFrom">
+                    <span
+                        class="text-1">From:</span><select
+                        id="selectFrom">
+                        <option
+                            value="degree">
+                            Degree
+                            centigrade
+                        </option>
+                        <option
+                            value="farenheit">
+                            farenheit
+                        </option>
+                    </select></div>
+                <div class="temp-component"
+                    id="convertTo"><span
+                        class="text-1">To:</span><select
+                        id="selectTo">
+                        <option
+                            value="farenheit">
+                            farenheit
+                        </option>
+                        <option
+                            value="degree">
+                            Degree
+                            centigrade
+                        </option>
+                    </select> </div>
+                <div class="temp-component"
+                    id="Result">
+                    <span
+                        class="text-1">Result:</span><input
+                        type="text"
+                        placeholder="result"
+                        class="inputArea"
+                        class="input"
+                        readonly />
+                </div>
+                <div id="convertercontainer">
+                    <button type="button"
+                        id="converter">convert</button>
+                </div>
             </div>
             </div>
         </section>

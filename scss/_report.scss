@@ -3,11 +3,41 @@
   @include transition(0.35s);
 }
 header {
-  width: 100%;
-  background-color: rgba($primary, 0.1);
+  width: 100vw;
+  min-width: 201px;
+  background-color: rgba($primary, 0.15);
   padding-left: 5px;
   padding: 10px 4px;
-  @include flex(space-between, center);
+  & .header {
+    @include flex(space-between, center);
+    max-width: 860px;
+    margin: auto;
+  }
+  @include width280 {
+    text-align: center;
+    & .search {
+      width: 100% !important;
+      padding: 0 !important;
+    }
+    & input {
+      width: 99% !important;
+      border-radius: 3px;
+    }
+    & button {
+      position: relative !important;
+      width: 50% !important;
+      margin: auto !important;
+      margin-top: 8px !important;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+  }
+  @include width438 {
+    flex-direction: column;
+    .search {
+      width: 90% !important;
+    }
+  }
   h2 {
     font-size: 1.8em;
     width: 35%;
@@ -36,7 +66,7 @@ header {
     }
     button {
       position: absolute;
-      right: 0;
+      right: 20px;
       top: 0px;
       border: none;
       height: 32px;
@@ -49,6 +79,8 @@ header {
 .geo-body {
   text-align: center;
   padding-top: 20px;
+  max-width: 860px;
+  margin: auto;
 }
 .location-name {
   border-bottom: thin solid rgba($primary, 0.2);
@@ -72,6 +104,11 @@ header {
   }
 }
 .temperature {
+  @include width240 {
+    p {
+      font-size: 3.5em !important;
+    }
+  }
   p {
     font-size: 5em;
   }

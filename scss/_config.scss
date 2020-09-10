@@ -22,3 +22,43 @@ $accent: rgba(255, 255, 255, 0.8);
   top: 0;
   left: 0;
 }
+@mixin width480 {
+  @media all and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin width438 {
+  @media all and (max-width: 438px) {
+    @content;
+  }
+}
+@mixin width320 {
+  @media all and (max-width: 320px) {
+    @content;
+  }
+}
+@mixin width280 {
+  @media all and (max-width: 280px) {
+    @content;
+  }
+}
+@mixin width240 {
+  @media all and (max-width: 284px) {
+    @content;
+  }
+}
+@mixin height520 {
+  @media all and (max-height: 520px) {
+    @content;
+  }
+}
+@mixin height420 {
+  @media all and (max-height: 420px) {
+    @content;
+  }
+}
+@mixin width201 {
+  @media all and (max-width: 201px) {
+    @content;
+  }
+}

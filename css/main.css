@@ -12,10 +12,14 @@
 }
 
 header {
-  width: 100%;
-  background-color: rgba(39, 39, 39, 0.1);
+  width: 100vw;
+  min-width: 201px;
+  background-color: rgba(39, 39, 39, 0.15);
   padding-left: 5px;
   padding: 10px 4px;
+}
+
+header .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,6 +29,42 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 860px;
+  margin: auto;
+}
+
+@media all and (max-width: 280px) {
+  header {
+    text-align: center;
+  }
+  header .search {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  header input {
+    width: 99% !important;
+    border-radius: 3px;
+  }
+  header button {
+    position: relative !important;
+    width: 50% !important;
+    margin: auto !important;
+    margin-top: 8px !important;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+}
+
+@media all and (max-width: 438px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .search {
+    width: 90% !important;
+  }
 }
 
 header h2 {
@@ -80,7 +120,7 @@ header .search input::placeholder {
 
 header .search button {
   position: absolute;
-  right: 0;
+  right: 20px;
   top: 0px;
   border: none;
   height: 32px;
@@ -92,6 +132,8 @@ header .search button {
 .geo-body {
   text-align: center;
   padding-top: 20px;
+  max-width: 860px;
+  margin: auto;
 }
 
 .location-name {
@@ -126,6 +168,12 @@ header .search button {
 .temp-label button {
   height: 35px;
   width: 42px;
+}
+
+@media all and (max-width: 284px) {
+  .temperature p {
+    font-size: 3.5em !important;
+  }
 }
 
 .temperature p {
@@ -222,10 +270,16 @@ header .search button {
   z-index: 1;
   background-color: #272727;
   padding-top: 25px;
+  padding-bottom: 30px;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   -webkit-transition: all 0.7s linear;
   transition: all 0.7s linear;
+}
+
+.calculator .temp-body {
+  max-width: 860px;
+  margin: auto;
 }
 
 .calculator .close {
@@ -305,9 +359,53 @@ header .search button {
   font-size: 1.2em;
 }
 
+@media all and (max-width: 480px) {
+  .calculator .text-1 {
+    padding-left: 5px;
+  }
+  .calculator .inputArea {
+    width: 65% !important;
+  }
+  .calculator select {
+    width: 60% !important;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .calculator .text-1 {
+    display: block;
+    text-align: left;
+    margin: 0 !important;
+  }
+  .calculator .temp-component {
+    margin: 0 !important;
+  }
+  .calculator .inputArea {
+    width: 97% !important;
+  }
+  .calculator select {
+    width: 90% !important;
+  }
+}
+
 .openconverter {
   -webkit-transform: translateY(40%);
           transform: translateY(40%);
+}
+
+@media all and (max-height: 520px) {
+  .openconverter {
+    -webkit-transform: translateY(20%) !important;
+            transform: translateY(20%) !important;
+  }
+}
+
+@media all and (max-height: 420px) {
+  .openconverter {
+    overflow-y: scroll !important;
+    -webkit-transform: translateY(0%) !important;
+            transform: translateY(0%) !important;
+  }
 }
 
 .mapview {
@@ -437,5 +535,12 @@ main {
   overflow-y: scroll;
   overflow-x: hidden;
   padding-bottom: 20px;
+}
+
+@media all and (max-width: 201px) {
+  main {
+    width: 201px;
+    overflow: scroll !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */
