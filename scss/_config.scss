@@ -4,8 +4,13 @@
   box-sizing: border-box;
 }
 $primary: #272727;
-$accent: rgba(255, 255, 255, 0.95);
+$accent: rgba(255, 255, 255, 0.8);
 @mixin fullScreen {
   width: 100%;
   height: 100%;
+}
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
 }

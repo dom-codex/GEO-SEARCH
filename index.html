@@ -13,7 +13,13 @@
 <body>
     <main>
         <header>
-            <h2>Geo Search</h2>
+            <h2><span>Geo</span>Search
+            </h2>
+            <div class="search">
+                <input type="text"
+                    placeholder="Enter location" />
+                <button>search</button>
+            </div>
         </header>
         <section class="geo-body">
             <div class="location-name">
@@ -24,7 +30,8 @@
                 <button>conv</button>
             </div>
             <div class="temperature">
-                <p>27 &deg;C</p>
+                <p>27 &deg;<small>C</small>
+                </p>
             </div>
             <div class="pos-label">
                 <p>Location</p>
@@ -39,24 +46,86 @@
                     <p>Longitude</p>
                     <p>25.45 &deg;</p>
                 </div>
-                <div
-                    class="weather-conditions">
-                    <h3
-                        class="weather-condition">
-                        Weather Conditions
-                    </h3>
-                    <div class="wind-speed">
-                        <span>Wind-Speed</span>
-                        <div>20km/h</div>
+            </div>
+            <div class="weather-conditions">
+                <h3
+                    class="weather-condition">
+                    Weather Conditions
+                </h3>
+                <div class="wind-speed">
+                    <span>Wind-Speed</span>
+                    <div class="val">20km/h
                     </div>
-                    <div class="humidity">
-                        <span>Humidity</span>
-                        <div>20%</div>
+                </div>
+                <div class="humidity">
+                    <span>Humidity</span>
+                    <div class="val">20%
                     </div>
-                    <div class="prep">
-                        <span>Precipitation</span>
-                        <div>20</div>
-                    </div>
+                </div>
+                <div class="prep">
+                    <span>Precipitation</span>
+                    <div class="val">20</div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="calculator">
+            <div id="tempcontainer">
+                <p class="text-1"
+                    id="temp-title">
+                    Temperature Converter</p>
+                <hr />
+
+                <div class="temp-component"
+                    id="convert"><span
+                        class="text-1">Convert:</span><input
+                        type="number"
+                        placeholder="Enter value of temperature to convert"
+                        id="inputArea"
+                        class="input">
+                </div>
+                <div class="temp-component"
+                    id="convertFrom">
+                    <span
+                        class="text-1">From:</span><select
+                        id="selectFrom">
+                        <option
+                            value="degree">
+                            Degree
+                            centigrade
+                        </option>
+                        <option
+                            value="farenheit">
+                            farenheit
+                        </option>
+                    </select></div>
+                <div class="temp-component"
+                    id="convertTo"><span
+                        class="text-1">To:</span><select
+                        id="selectTo">
+                        <option
+                            value="farenheit">
+                            farenheit
+                        </option>
+                        <option
+                            value="degree">
+                            Degree
+                            centigrade
+                        </option>
+                    </select> </div>
+                <div class="temp-component"
+                    id="Result">
+                    <span
+                        class="text-1">Result:</span><input
+                        type="text"
+                        placeholder="result"
+                        id="conversionResult"
+                        class="input"
+                        readonly />
+                </div>
+                <div id="convertercontainer">
+                    <button type="button"
+                        id="converter">convert</button>
                 </div>
             </div>
         </section>
