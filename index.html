@@ -27,7 +27,8 @@
             </div>
             <div class="temp-label">
                 <p>Temperature</p>
-                <button>conv</button>
+                <button
+                    class="open-conv">conv</button>
             </div>
             <div class="temperature">
                 <p>27 &deg;<small>C</small>
@@ -74,62 +75,63 @@
                 <p class="text-1"
                     id="temp-title">
                     Temperature Converter</p>
+                <span><button
+                        class="close">close</button></span>
                 <hr />
 
-                <div class="temp-component"
-                    id="convert"><span
-                        class="text-1">Convert:</span><input
-                        type="number"
-                        placeholder="Enter value of temperature to convert"
-                        id="inputArea"
-                        class="input">
+                <div class="temp-component">
                 </div>
-                <div class="temp-component"
-                    id="convertFrom">
-                    <span
-                        class="text-1">From:</span><select
-                        id="selectFrom">
-                        <option
-                            value="degree">
-                            Degree
-                            centigrade
-                        </option>
-                        <option
-                            value="farenheit">
-                            farenheit
-                        </option>
-                    </select></div>
-                <div class="temp-component"
-                    id="convertTo"><span
-                        class="text-1">To:</span><select
-                        id="selectTo">
-                        <option
-                            value="farenheit">
-                            farenheit
-                        </option>
-                        <option
-                            value="degree">
-                            Degree
-                            centigrade
-                        </option>
-                    </select> </div>
-                <div class="temp-component"
-                    id="Result">
-                    <span
-                        class="text-1">Result:</span><input
-                        type="text"
-                        placeholder="result"
-                        id="conversionResult"
-                        class="input"
-                        readonly />
-                </div>
-                <div id="convertercontainer">
-                    <button type="button"
-                        id="converter">convert</button>
-                </div>
+                <span
+                    class="text-1">Convert:</span><input
+                    type="number"
+                    placeholder="Enter value of temperature to convert"
+                    class="inputArea"
+                    class="input">
+            </div>
+            <div class="temp-component"
+                id="convertFrom">
+                <span
+                    class="text-1">From:</span><select
+                    id="selectFrom">
+                    <option value="degree">
+                        Degree
+                        centigrade
+                    </option>
+                    <option
+                        value="farenheit">
+                        farenheit
+                    </option>
+                </select></div>
+            <div class="temp-component"
+                id="convertTo"><span
+                    class="text-1">To:</span><select
+                    id="selectTo">
+                    <option
+                        value="farenheit">
+                        farenheit
+                    </option>
+                    <option value="degree">
+                        Degree
+                        centigrade
+                    </option>
+                </select> </div>
+            <div class="temp-component"
+                id="Result">
+                <span
+                    class="text-1">Result:</span><input
+                    type="text"
+                    placeholder="result"
+                    class="inputArea"
+                    class="input" readonly />
+            </div>
+            <div id="convertercontainer">
+                <button type="button"
+                    id="converter">convert</button>
+            </div>
             </div>
         </section>
     </main>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

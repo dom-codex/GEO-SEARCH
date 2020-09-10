@@ -14,3 +14,6 @@ $accent: rgba(255, 255, 255, 0.8);
   justify-content: $justify;
   align-items: $align;
 }
+@mixin transition($sec) {
+  transition: all $sec linear;
+}
