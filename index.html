@@ -11,64 +11,72 @@
 </head>
 
 <body>
+
     <main>
-        <header>
-            <h2><span>Geo</span>Search
-            </h2>
-            <div class="search">
-                <input type="text"
-                    placeholder="Enter location" />
-                <button>search</button>
-            </div>
-        </header>
-        <section class="geo-body">
-            <div class="location-name">
-                <p>Lagos,Nigeria</p>
-            </div>
-            <div class="temp-label">
-                <p>Temperature</p>
-                <button
-                    class="open-conv">conv</button>
-            </div>
-            <div class="temperature">
-                <p>27 &deg;<small>C</small>
-                </p>
-            </div>
-            <div class="pos-label">
-                <p>Location</p>
-                <button>Map</button>
-            </div>
-            <div class="positions">
-                <div class="latitude">
-                    <p>Latitude</p>
-                    <p>20.45 &deg;</p>
+        <section class="weather-reports">
+            <header>
+                <h2><span>Geo</span>Search
+                </h2>
+                <div class="search">
+                    <input type="text"
+                        placeholder="Enter location" />
+                    <button>search</button>
                 </div>
-                <div class="longitude">
-                    <p>Longitude</p>
-                    <p>25.45 &deg;</p>
+            </header>
+            <section class="geo-body">
+                <div class="location-name">
+                    <p>Lagos,Nigeria</p>
                 </div>
-            </div>
-            <div class="weather-conditions">
-                <h3
-                    class="weather-condition">
-                    Weather Conditions
-                </h3>
-                <div class="wind-speed">
-                    <span>Wind-Speed</span>
-                    <div class="val">20km/h
+                <div class="temp-label">
+                    <p>Temperature</p>
+                    <button
+                        class="open-conv">conv</button>
+                </div>
+                <div class="temperature">
+                    <p>27
+                        &deg;<small>C</small>
+                    </p>
+                </div>
+                <div class="pos-label">
+                    <p>Location</p>
+                    <button
+                        class="openMap">Map</button>
+                </div>
+                <div class="positions">
+                    <div class="latitude">
+                        <p>Latitude</p>
+                        <p>20.45 &deg;</p>
+                    </div>
+                    <div class="longitude">
+                        <p>Longitude</p>
+                        <p>25.45 &deg;</p>
                     </div>
                 </div>
-                <div class="humidity">
-                    <span>Humidity</span>
-                    <div class="val">20%
+                <div
+                    class="weather-conditions">
+                    <h3
+                        class="weather-condition">
+                        Weather Conditions
+                    </h3>
+                    <div class="wind-speed">
+                        <span>Wind-Speed</span>
+                        <div class="val">
+                            20km/h
+                        </div>
+                    </div>
+                    <div class="humidity">
+                        <span>Humidity</span>
+                        <div class="val">20%
+                        </div>
+                    </div>
+                    <div class="prep">
+                        <span>Precipitation</span>
+                        <div class="val">20
+                        </div>
                     </div>
                 </div>
-                <div class="prep">
-                    <span>Precipitation</span>
-                    <div class="val">20</div>
                 </div>
-            </div>
-            </div>
+            </section>
         </section>
         <section class="calculator">
             <div id="tempcontainer">
@@ -128,6 +136,19 @@
                 <button type="button"
                     id="converter">convert</button>
             </div>
+            </div>
+        </section>
+        <section class="mapview">
+            <div class="mapdesc">
+                <h2>Map Of</h2>
+                <p>Lagos,Nigeria</p>
+            </div>
+            <div class="map">
+                <img src="./warri.png" />
+            </div>
+            <div class="map-close">
+                <button
+                    class="map-close">CLOSE</button>
             </div>
         </section>
     </main>

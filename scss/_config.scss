@@ -17,3 +17,8 @@ $accent: rgba(255, 255, 255, 0.8);
 @mixin transition($sec) {
   transition: all $sec linear;
 }
+@mixin fixedPos {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
