@@ -1,0 +1,8 @@
+.loading {
+  position: fixed;
+  @include flex(center, center);
+  background-color: rgba($accent, 0.85);
+  @include fullScreen;
+  z-index: 3;
+  display: none;
+}

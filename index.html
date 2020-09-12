@@ -11,9 +11,31 @@
 </head>
 
 <body>
-
+    <div class="loading">
+        <img src="geoload.gif" />
+    </div>
     <main>
         <section class="weather-reports">
+            <div class="dialog">
+                <div class="dialog-body">
+                    <div
+                        class="dialog-title">
+                        <p>NOTE</p>
+                    </div>
+                    <div class="dialog-text">
+                        <p>
+                            Location not
+                            found!!!
+                        </p>
+                    </div>
+                    <div class="d-ctrls">
+                        <button
+                            class="d-close">CLOSE</button>
+                        <button
+                            class="retry">RETRY</button>
+                    </div>
+                </div>
+            </div>
             <header>
                 <div class="header">
                     <h2><span>Geo</span>Search
@@ -21,7 +43,8 @@
                     <div class="search">
                         <input type="text"
                             placeholder="Enter location" />
-                        <button>search</button>
+                        <button
+                            class="search-btn">search</button>
                     </div>
                 </div>
             </header>
@@ -38,6 +61,8 @@
                     <p>27
                         &deg;<small>C</small>
                     </p>
+                    <small
+                        class="desc"></small>
                 </div>
                 <div class="pos-label">
                     <p>Location</p>
@@ -47,11 +72,13 @@
                 <div class="positions">
                     <div class="latitude">
                         <p>Latitude</p>
-                        <p>20.45 &deg;</p>
+                        <p class="lat">20.45
+                            &deg;</p>
                     </div>
                     <div class="longitude">
                         <p>Longitude</p>
-                        <p>25.45 &deg;</p>
+                        <p class="long">25.45
+                            &deg;</p>
                     </div>
                 </div>
                 <div
@@ -61,8 +88,9 @@
                         Weather Conditions
                     </h3>
                     <div class="wind-speed">
-                        <span>Wind-Speed</span>
-                        <div class="val">
+                        <span
+                            class="">Wind-Speed</span>
+                        <div class="val ws">
                             20km/h
                         </div>
                     </div>
@@ -71,9 +99,10 @@
                         <div class="val">20%
                         </div>
                     </div>
-                    <div class="prep">
-                        <span>Precipitation</span>
-                        <div class="val">20
+                    <div class="pressure">
+                        <span>Pressure</span>
+                        <div class="val">
+                            20
                         </div>
                     </div>
                 </div>
@@ -98,8 +127,8 @@
                         class="text-1">Convert:</span><input
                         type="number"
                         placeholder="Enter value of temperature to convert"
-                        class="inputArea"
-                        class="input">
+                        id="inputArea"
+                        class="inputArea input">
                 </div>
                 <div class="temp-component"
                     id="convertFrom">
@@ -136,8 +165,8 @@
                         class="text-1">Result:</span><input
                         type="text"
                         placeholder="result"
-                        class="inputArea"
-                        class="input"
+                        class="inputArea input result"
+                        id="result"
                         readonly />
                 </div>
                 <div id="convertercontainer">
@@ -161,6 +190,10 @@
             </div>
         </section>
     </main>
+    <script
+        src="./js/jquery-3.4.1.min.js"></script>
+    <script src="js/request.js"></script>
+    <script src="js/converter.js"></script>
     <script src="js/main.js"></script>
 </body>
 

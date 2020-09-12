@@ -25,15 +25,24 @@ header {
     }
     & button {
       position: relative !important;
+      right: 0 !important;
       width: 50% !important;
       margin: auto !important;
-      margin-top: 8px !important;
+      margin-top: 5px !important;
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
     }
   }
   @include width438 {
-    flex-direction: column;
+    & .header {
+      flex-direction: column;
+      & input {
+        margin-left: -8px;
+      }
+      & button {
+        margin-left: 20px;
+      }
+    }
     .search {
       width: 90% !important;
     }
@@ -54,7 +63,7 @@ header {
     input {
       width: 85%;
       height: 32px;
-      padding-left: 3px;
+      padding-left: 8px;
       border: none;
       outline: none;
       background-color: rgba($primary, 0.3);
@@ -95,13 +104,18 @@ header {
   @include flex(center, center);
   margin-top: 10px;
   p {
-    margin-right: 8px;
     color: $accent;
   }
   button {
     height: 35px;
     width: 42px;
   }
+}
+.desc {
+  color: $accent;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 4px 0px 4px;
 }
 .temperature {
   @include width240 {
@@ -122,12 +136,14 @@ header {
   margin-bottom: 12px;
   border-bottom: thin solid $accent;
   padding-bottom: 5px;
+  font-weight: bold;
   p {
     margin-right: 5px;
   }
   button {
     width: 42px;
     height: 25px;
+    display: none;
   }
 }
 .positions {
