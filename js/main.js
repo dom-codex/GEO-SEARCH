@@ -45,3 +45,6 @@ retry.addEventListener("click", () => {
   geoCodeString(input);
   closeDialog();
 });
+const input = document.querySelector(".search input");
+// creates an autocomplete object  with the search box
+const autocomplete = new google.maps.places.Autocomplete(input);

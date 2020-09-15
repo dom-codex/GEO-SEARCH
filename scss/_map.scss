@@ -2,9 +2,11 @@
   @include fixedPos;
   @include fullScreen;
   @include transition(0.35s);
+  overflow-y: scroll !important;
   opacity: 0;
   background-color: $primary;
   z-index: -1;
+  padding-bottom: 30px;
   & .mapdesc {
     margin: 12px 0;
     text-align: center;
@@ -17,12 +19,12 @@
   & .map {
     min-width: 100px;
     max-width: 680px;
-    max-height: 480px;
     width: 98%;
     margin: auto;
     & img {
       width: 100%;
       height: 100%;
+      max-height: 520px;
     }
   }
   & .map-close {
@@ -48,8 +50,8 @@
 }
 @keyframes fadeout {
   from {
-    opacity: 1;
-    z-index: 1;
+    opacity: 1 !important;
+    z-index: 1 !important;
   }
   to {
     opacity: 0;

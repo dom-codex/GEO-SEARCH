@@ -439,9 +439,11 @@ header .search button {
   height: 100%;
   -webkit-transition: all 0.35s linear;
   transition: all 0.35s linear;
+  overflow-y: scroll !important;
   opacity: 0;
   background-color: #272727;
   z-index: -1;
+  padding-bottom: 30px;
 }
 
 .mapview .mapdesc {
@@ -458,7 +460,6 @@ header .search button {
 .mapview .map {
   min-width: 100px;
   max-width: 680px;
-  max-height: 480px;
   width: 98%;
   margin: auto;
 }
@@ -466,6 +467,7 @@ header .search button {
 .mapview .map img {
   width: 100%;
   height: 100%;
+  max-height: 520px;
 }
 
 .mapview .map-close {
@@ -501,8 +503,8 @@ header .search button {
 
 @-webkit-keyframes fadeout {
   from {
-    opacity: 1;
-    z-index: 1;
+    opacity: 1 !important;
+    z-index: 1 !important;
   }
   to {
     opacity: 0;
@@ -512,8 +514,8 @@ header .search button {
 
 @keyframes fadeout {
   from {
-    opacity: 1;
-    z-index: 1;
+    opacity: 1 !important;
+    z-index: 1 !important;
   }
   to {
     opacity: 0;

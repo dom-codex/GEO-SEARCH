@@ -15,7 +15,7 @@ const hideLoader = () => {
   $(".loading").css("display", "none");
 };
 const showLoader = () => {
-  $(".loading").css("display", "block");
+  $(".loading").css("display", "flex");
 };
 const getPostalCode = (lat, long) => {
   const getPost = $.ajax({
@@ -43,11 +43,11 @@ const weather = (lat, long, locationName) => {
     type: "GET",
     dataType: "json",
     success: (resp) => {
-      hideLoader();
-      $("img").attr(
+      $(".mapview img").attr(
         "src",
         `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${long}&zoom=14&scale=4&format=png32&size=400x400&markers=size:mid%7Ccolor:0xFFFF00%7Clabel:C%7C${lat},${long}&key=AIzaSyCBWYroFnjgJuHpcuhkk9Zf7vPgVNJknCk`
       );
+      $(".map-location").text(locationName);
       showMapBtn();
       const description = `${resp.weather[0].description}`;
       const temperature = `${resp.main.temp}`;
@@ -62,6 +62,7 @@ const weather = (lat, long, locationName) => {
       $(".ws").text(`${windSpeed}m/s`);
       $(".humidity div").text(`${humidity}%`);
       $(".pressure div").text(`${pressure}Kpa`);
+      hideLoader();
     },
     timeout: 20000,
     error: (e) => {
@@ -81,13 +82,13 @@ const geoCodeString = (locationName) => {
     type: "GET",
     dataType: "json",
     success: (data) => {
-      hideLoader();
       if (data.status === "OK") {
         const lat = `${data.results[0].geometry.location.lat}`;
         const long = `${data.results[0].geometry.location.lng}`;
         //   getPostalCode(lat, long); // call to get postcode
         weather(lat, long, locationName); // call to weather api
       } else {
+        hideLoader();
         geoCode.abort(); // aborts the ajax call to the weather api
         // removes the loading class from the body element
         // $("#warningText").text("Place not found...!"); // notify the user place
