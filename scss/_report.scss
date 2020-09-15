@@ -108,7 +108,8 @@ header {
   }
   button {
     height: 35px;
-    width: 42px;
+    padding: 5px;
+    margin-left: 3px;
   }
 }
 .desc {
@@ -141,8 +142,9 @@ header {
     margin-right: 5px;
   }
   button {
-    width: 42px;
     height: 25px;
+    padding: 5px;
+    padding-bottom: 20px;
     display: none;
   }
 }
