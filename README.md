@@ -24,4 +24,4 @@ Geo-Search is a tool that allows people to search for places and extract informa
 [google maps platform](https://developers.google.com/maps/documentation/)
 
 ## Author
-[DOMINIC]([https://github.com/dom-codex](https://github.com/dom-codex)
+[DOMINIC]([https://github.com/dom-codex](https://github.com/dom-codex))
